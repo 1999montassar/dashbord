@@ -1,0 +1,37 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="width: 350px; margin-top: -90px;">
+      <h3 class="text-center">Vérification du Code</h3>
+  
+      <form [formGroup]="verifeyForm" (ngSubmit)="verifierCode()">
+        <!-- Champ de code de vérification -->
+        <div class="mb-3">
+          <label class="form-label">Code de vérification</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="verificationCode"
+            placeholder="Entrez le code envoyé"
+            [ngClass]="{'is-invalid': verifeyForm.controls['verificationCode'].invalid && verifeyForm.controls['verificationCode'].touched}"
+            required
+          />
+        </div>
+  
+        <!-- Bouton de soumission -->
+        <button 
+          type="submit" 
+          class="btn btn-dark w-100" 
+          style="background-color: #555;" 
+          routerLink="/newPassword">
+          Vérifier le code
+        </button>
+      </form>
+  
+      <!-- Lien pour revenir à la réinitialisation -->
+      <div class="text-center mt-3">
+        <a routerLink="/forgot-password" class="text-decoration-none" >
+          Retour à la réinitialisation
+        </a>
+      </div>
+    </div>
+  </div>
+  

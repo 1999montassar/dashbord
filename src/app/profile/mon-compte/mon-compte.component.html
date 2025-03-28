@@ -1,0 +1,71 @@
+<div class="container custom-container">
+  <div class="row w-100 justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10"> 
+      <div class="card custom-card shadow-lg border-0 mx-auto">
+        
+        <!-- HEADER (ROUGE FONCÉ) -->
+        <div class="card-header text-center text-white" style="background-color: #800000;">
+          <h4><i class="bi bi-person-circle"></i> Mon Compte</h4>
+        </div>
+
+        <!-- CONTENU -->
+        <div class="card-body text-center d-flex flex-column justify-content-center">
+          
+          <!-- IMAGE DE PROFIL -->
+          <div class="position-relative d-inline-block">
+            <img 
+              [src]="selectedImage ? selectedImage : user.avatar" 
+              class="rounded-circle shadow-sm border border-3 border-secondary" 
+              width="120" height="120" 
+              alt="Avatar">
+          </div>
+
+          <!-- CHANGER PHOTO -->
+          <div class="mt-3">
+            <label class="btn btn-outline-secondary btn-sm">
+              <i class="bi bi-camera"></i> Changer de photo
+              <input type="file" hidden (change)="onFileSelected($event)">
+            </label>
+          </div>
+
+          <!-- BOUTON CONFIRMATION PHOTO (GRIS #555) -->
+          <button *ngIf="selectedImage" class="btn text-white btn-sm mt-2" style="background-color: #555;" (click)="confirmerChangementPhoto()">
+            <i class="bi bi-check-circle"></i> Confirmer
+          </button>
+
+          <!-- INFOS UTILISATEUR -->
+          <h5 class="mt-3">{{ user.nom }}</h5>
+          <p class="text-muted">{{ user.email }}</p>
+          <p><i class="bi bi-telephone"></i> {{ user.telephone }}</p>
+
+          <hr>
+
+          <!-- FORMULAIRE DE MODIFICATION -->
+          <form [formGroup]="compteForm" (ngSubmit)="sauvegarderModifications()">
+            
+            <div class="mb-3">
+              <label class="form-label">Nom :</label>
+              <input type="text" class="form-control" formControlName="nom">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email :</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Téléphone :</label>
+              <input type="tel" class="form-control" formControlName="telephone">
+            </div>
+
+            <!-- BOUTON SAUVEGARDER (GRIS #555) -->
+            <button type="submit" class="btn w-100 text-white" style="background-color: #555;" [disabled]="compteForm.invalid">
+              <i class="bi bi-save"></i> Sauvegarder
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

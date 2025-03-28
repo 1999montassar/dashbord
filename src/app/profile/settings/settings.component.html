@@ -1,0 +1,66 @@
+<div class="container mt-4">
+  <h3>⚙️ Paramètres</h3>
+  <p>Modifiez vos préférences utilisateur ici.</p>
+  <form>
+    <!-- Language Selection -->
+    <div class="mb-3">
+      <label for="language" class="form-label">Langue</label>
+      <select id="language" class="form-select">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+      </select>
+    </div>
+
+    <!-- Profile Settings -->
+    
+
+    <!-- Email Preferences -->
+    <div class="mb-3">
+      <label for="emailPreferences" class="form-label">Préférences d'email</label>
+      <div>
+        <label class="form-check-label me-3">
+          <input class="form-check-input" type="checkbox" id="emailNotifications"> Recevoir des notifications par email
+        </label>
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" id="emailPromotions"> Recevoir des emails promotionnels
+        </label>
+      </div>
+    </div>
+
+    <!-- Privacy Settings -->
+    <div class="mb-3">
+      <label for="privacy" class="form-label">Confidentialité</label>
+      <div>
+        <label class="form-check-label me-3">
+          <input class="form-check-input" type="checkbox" id="shareData"> Partager mes données avec des partenaires
+        </label>
+      </div>
+    </div>
+
+    <!-- Security Settings -->
+    <div class="mb-3">
+      <label for="security" class="form-label">Sécurité</label>
+      <div>
+        <label class="form-check-label me-3">
+          <input class="form-check-input" type="checkbox" id="twoFactorAuth"> Activer l'authentification à deux facteurs
+        </label>
+      </div>
+    </div>
+
+    <!-- Notification Preferences -->
+    <div class="mb-3">
+      <label for="notifications" class="form-label">Notifications</label>
+      <div>
+        <label class="form-check-label me-3">
+          <input class="form-check-input" type="radio" name="notifications" value="enabled"> Activées
+        </label>
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="notifications" value="disabled"> Désactivées
+        </label>
+      </div>
+    </div>
+
+    <!-- Save Button -->
+    <button type="submit" class="btn btn-primary" style="background-color: #555;">Enregistrer</button>
+  </form>
+</div>

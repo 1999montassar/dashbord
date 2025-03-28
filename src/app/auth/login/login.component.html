@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100 px-3">
+  <div class="card p-4 shadow w-100" style="max-width: 400px;">
+    <h3 class="text-center">Connexion</h3>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3"> 
+        <label class="form-label">Nom d'utilisateur</label>
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Entrez votre nom d'utilisateur" required>
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Entrez votre mot de passe" required>
+      </div>
+      <button type="submit" class="btn btn-dark w-100" style="background-color: #555;">Se connecter</button>
+    </form>
+
+    <div class="text-center mt-3">
+      <a routerLink="/register">Créer un compte</a> | 
+      <a routerLink="/forgot-password">Mot de passe oublié ?</a>
+    </div>
+  </div>
+</div>

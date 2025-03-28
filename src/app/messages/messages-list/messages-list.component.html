@@ -1,0 +1,21 @@
+<div class="container" >
+  <h3 class="mb-3">Messages</h3>
+
+  <!-- Liste des sous-liens -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="sent" routerLinkActive="active">Messages envoyés</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="received" routerLinkActive="active">Messages reçus</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="favorites" routerLinkActive="active">Messages favoris</a>
+    </li>
+  </ul>
+
+  <!-- Sous-composants de messages -->
+  <div class="messages-content mt-2 p-2 border rounded">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px; /* Ajuste selon la hauteur de la navbar */
+}
+.container {
+  width: 50%;
+  height: 20%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none; /* Supprime l'ombre portée */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+  background-color: transparent; /* Supprime le fond blanc */
+  border: none; /* Supprime toute bordure */
+  
+}
+
